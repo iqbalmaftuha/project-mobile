@@ -26,17 +26,17 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: '/home-page',
+      initialRoute: '/',
       routes: {
         '/': (context) => Intro1Page(),
         '/intro2': (context) => Intro2Page(),
-        '/intro3': (context) => ScreenPage(),
+        '/screen-page': (context) => ScreenPage(),
         '/login-page': (context) => LoginPage(),
         '/register-page': (context) => RegisterPage(),
+        '/main-page': (context) => MainPage(),
         '/home-page': (context) => HomePage(),
         '/profile-page': (context) => ProfilePage(),
       },
-      // home: HomePage(),
     );
   }
 }

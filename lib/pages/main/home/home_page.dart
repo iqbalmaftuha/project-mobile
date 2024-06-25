@@ -1,4 +1,4 @@
-part of '../pages.dart';
+part of '../../pages.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       //bagian app bar
       appBar: AppBar(
-        backgroundColor: whiteColor,
+        backgroundColor: lightBackgroundColor,
         automaticallyImplyLeading: false,
         title: Padding(
           padding: const EdgeInsets.all(10),
@@ -108,8 +108,6 @@ class HomePage extends StatelessWidget {
           const RekomendasiPage(),
         ],
       ),
-      //bagian bottom navbar
-      bottomNavigationBar: const BottomnavbarWidget(),
     );
   }
 

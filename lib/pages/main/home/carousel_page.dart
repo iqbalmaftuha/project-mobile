@@ -1,4 +1,4 @@
-part of '../pages.dart';
+part of '../../pages.dart';
 
 class CarouselPage extends StatelessWidget {
   const CarouselPage({super.key});

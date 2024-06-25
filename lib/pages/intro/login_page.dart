@@ -42,12 +42,13 @@ class LoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Lupa kata sandi ?',
-                        style: pinkTextStyle.copyWith(
-                            fontSize: 12, fontWeight: reguler),
-                      ))
+                    onPressed: () {},
+                    child: Text(
+                      'Lupa kata sandi ?',
+                      style: pinkTextStyle.copyWith(
+                          fontSize: 12, fontWeight: reguler),
+                    ),
+                  ),
                 ],
               ),
               const SizedBox(
@@ -56,7 +57,7 @@ class LoginPage extends StatelessWidget {
               ButtonCustomePink(
                 title: 'Masuk',
                 onTap: () {
-                  Navigator.pushNamed(context, '/home-page');
+                  Navigator.pushNamed(context, '/main-page');
                 },
               ),
               const SizedBox(

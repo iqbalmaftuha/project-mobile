@@ -1,4 +1,4 @@
-part of '../pages.dart';
+part of '../../pages.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -12,14 +12,8 @@ class ProfilePage extends StatelessWidget {
           'Profile Pengguna',
           style: blackTextStyle.copyWith(fontSize: 18, fontWeight: bold),
         ),
-        leading: IconButton(
-          onPressed: () => Navigator.of(context).pop(),
-          icon: Icon(
-            Icons.arrow_back,
-            size: 24,
-            color: blackColor,
-          ),
-        ),
+        backgroundColor: lightBackgroundColor,
+        automaticallyImplyLeading: false,
       ),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 24),

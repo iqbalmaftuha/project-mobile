@@ -42,7 +42,7 @@ class Intro2Page extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 60, right: 120, left: 120),
         child: ElevatedButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/intro3');
+            Navigator.pushNamed(context, '/screen-page');
           },
           child: Text(
             "Mulai",
