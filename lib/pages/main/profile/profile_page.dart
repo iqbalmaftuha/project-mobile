@@ -13,6 +13,7 @@ class ProfilePage extends StatelessWidget {
           style: blackTextStyle.copyWith(fontSize: 18, fontWeight: bold),
         ),
         backgroundColor: lightBackgroundColor,
+        surfaceTintColor: lightBackgroundColor,
         automaticallyImplyLeading: false,
       ),
       body: ListView(
@@ -97,6 +98,8 @@ class ProfilePage extends StatelessWidget {
           optionMenu('Kebijakan Cena', () {}),
           const Divider(),
           optionMenu('Tentang', () {}),
+          const Divider(),
+          optionMenu('Keluar', () {}),
         ],
       ),
     );

@@ -30,53 +30,61 @@ class _NavigationExampleState extends State<MainPage> {
               topLeft: Radius.circular(40),
               topRight: Radius.circular(40),
             ),
-            child: Container(
-              child: NavigationBarTheme(
-                data: NavigationBarThemeData(
-                  indicatorColor: softGreyColor,
-                  labelTextStyle: WidgetStateProperty.all(
-                    TextStyle(color: Colors.blue),
+            child: NavigationBarTheme(
+              data: NavigationBarThemeData(
+                indicatorColor: softGreyColor,
+                labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
+              ),
+              child: NavigationBar(
+                backgroundColor: navigasibarColor,
+                selectedIndex: currentPageIndex,
+                onDestinationSelected: (int index) {
+                  setState(() {
+                    currentPageIndex = index;
+                  });
+                },
+                destinations: <Widget>[
+                  NavigationDestination(
+                    icon: Padding(
+                      padding: const EdgeInsets.only(top: 2),
+                      child: Image.asset(
+                        'assets/icons/ic_home.png',
+                        scale: 1.2,
+                      ),
+                    ),
+                    label: 'Home',
+                    selectedIcon: Padding(
+                      padding: const EdgeInsets.only(top: 2),
+                      child: Image.asset(
+                        'assets/icons/ic_home_filled.png',
+                        scale: 1.2,
+                        color: pinkColor,
+                      ),
+                    ),
                   ),
-                  labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
-                ),
-                child: NavigationBar(
-                  backgroundColor: navigasibarColor,
-                  selectedIndex: currentPageIndex,
-                  onDestinationSelected: (int index) {
-                    setState(() {
-                      currentPageIndex = index;
-                    });
-                  },
-                  destinations: <Widget>[
-                    NavigationDestination(
-                      icon: Icon(Icons.home_outlined, color: iconbarColor),
-                      label: 'Home',
-                      selectedIcon: Icon(Icons.home, color: pinkColor),
+                  NavigationDestination(
+                    icon: Icon(Icons.menu_book_outlined, color: iconbarColor),
+                    label: 'Form',
+                    selectedIcon: Icon(
+                      Icons.menu_book,
+                      color: pinkColor,
                     ),
-                    NavigationDestination(
-                      icon: Icon(Icons.menu_book_outlined, color: iconbarColor),
-                      label: 'Form',
-                      selectedIcon: Icon(
-                        Icons.menu_book,
-                        color: pinkColor,
-                      ),
+                  ),
+                  NavigationDestination(
+                    icon: Icon(Icons.bookmark_border, color: iconbarColor),
+                    label: 'Form',
+                    selectedIcon: Icon(
+                      Icons.bookmark,
+                      color: pinkColor,
                     ),
-                    NavigationDestination(
-                      icon: Icon(Icons.bookmark_border, color: iconbarColor),
-                      label: 'Form',
-                      selectedIcon: Icon(
-                        Icons.bookmark,
-                        color: pinkColor,
-                      ),
-                    ),
-                    NavigationDestination(
-                      icon: Icon(Icons.perm_identity_outlined,
-                          color: iconbarColor),
-                      label: 'Profile',
-                      selectedIcon: Icon(Icons.person, color: pinkColor),
-                    ),
-                  ],
-                ),
+                  ),
+                  NavigationDestination(
+                    icon:
+                        Icon(Icons.perm_identity_outlined, color: iconbarColor),
+                    label: 'Profile',
+                    selectedIcon: Icon(Icons.person, color: pinkColor),
+                  ),
+                ],
               ),
             ),
           ),

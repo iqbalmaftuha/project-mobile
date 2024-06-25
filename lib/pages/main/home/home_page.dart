@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
       //bagian app bar
       appBar: AppBar(
         backgroundColor: lightBackgroundColor,
+        surfaceTintColor: lightBackgroundColor,
         automaticallyImplyLeading: false,
         title: Padding(
           padding: const EdgeInsets.all(10),
