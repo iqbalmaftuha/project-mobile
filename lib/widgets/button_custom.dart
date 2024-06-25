@@ -30,12 +30,16 @@ class ButtonCustomePink extends StatelessWidget {
 }
 
 class ButtonCustomeWhite extends StatelessWidget {
+  final double? heigth;
+  final double? width;
   final VoidCallback? onTap;
   final String title;
   const ButtonCustomeWhite({
     super.key,
     required this.title,
     this.onTap,
+    this.heigth = 40,
+    this.width = 220,
   });
 
   @override
@@ -44,8 +48,8 @@ class ButtonCustomeWhite extends StatelessWidget {
       onTap: onTap,
       child: Container(
         padding: EdgeInsets.all(8),
-        width: 220,
-        height: 40,
+        width: width,
+        height: heigth,
         decoration: BoxDecoration(
           color: whiteColor,
           border: Border.all(color: pinkColor),

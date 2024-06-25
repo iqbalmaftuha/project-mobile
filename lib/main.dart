@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projectmobile/pages/main/produk/adproduk_page.dart';
 import 'package:projectmobile/pages/pages.dart';
 import 'package:projectmobile/shared/shared.dart';
 
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         '/main-page': (context) => MainPage(),
         '/home-page': (context) => HomePage(),
         '/profile-page': (context) => ProfilePage(),
+        '/adproduk-page': (context) => AdprodukPage(),
       },
     );
   }

@@ -59,7 +59,9 @@ class ProfilePage extends StatelessWidget {
             'Akun Saya',
             style: greyTextStyle.copyWith(fontSize: 12, fontWeight: reguler),
           ),
-          optionMenu('Atur Produk Seller', () {}),
+          optionMenu('Atur Produk Seller', () {
+            Navigator.pushNamed(context, '/adproduk-page');
+          }),
           const Divider(),
           optionMenu('Atur Data Saya', () {}),
           const SizedBox(
@@ -99,7 +101,9 @@ class ProfilePage extends StatelessWidget {
           const Divider(),
           optionMenu('Tentang', () {}),
           const Divider(),
-          optionMenu('Keluar', () {}),
+          optionMenu('Keluar', () {
+            Navigator.pushNamed(context, '/screen-page');
+          }),
         ],
       ),
     );
@@ -107,6 +111,7 @@ class ProfilePage extends StatelessWidget {
 
   Widget optionMenu(String title, VoidCallback onTap) {
     return GestureDetector(
+      onTap: onTap,
       child: SizedBox(
         height: 32,
         child: Row(

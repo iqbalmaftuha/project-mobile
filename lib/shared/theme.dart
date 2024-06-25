@@ -12,7 +12,7 @@ Color softGreyColor = const Color(0xffF1F1F1);
 Color lightBackgroundColor = const Color(0xffFAFAFA);
 // Color blueColor = const Color(0xff0083E4);
 // Color orangeColor = const Color(0xffFF9A18);
-// Color greenColor = const Color(0xff59BF70);
+Color greenColor = const Color(0xff295021);
 // Color darkGreyColor = const Color(0xff545454);
 
 TextStyle blackTextStyle = GoogleFonts.poppins(color: blackColor);
@@ -20,7 +20,7 @@ TextStyle whiteTextStyle = GoogleFonts.poppins(color: whiteColor);
 TextStyle greyTextStyle = GoogleFonts.poppins(color: greyColor);
 TextStyle pinkTextStyle = GoogleFonts.poppins(color: pinkColor);
 // TextStyle blueTextStyle = GoogleFonts.poppins(color: blueColor);
-// TextStyle greenTextStyle = GoogleFonts.poppins(color: greenColor);
+TextStyle greenTextStyle = GoogleFonts.poppins(color: greenColor);
 // TextStyle orangeTextStyle = GoogleFonts.poppins(color: orangeColor);
 
 FontWeight light = FontWeight.w300;

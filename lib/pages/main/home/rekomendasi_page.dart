@@ -111,11 +111,12 @@ class RekomendasiPage extends StatelessWidget {
                   color: Color(0xff9D9D9D),
                 ),
               ),
+              SizedBox(height: 8),
               Text(
                 book.price,
                 style: TextStyle(
                   fontSize: 15,
-                  color: Color(0xff295021),
+                  color: greenColor,
                   fontWeight: semiBold,
                 ),
               ),
