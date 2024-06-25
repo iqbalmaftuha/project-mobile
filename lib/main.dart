@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projectmobile/pages/intro1_page.dart';
-import 'package:projectmobile/pages/intro2_page.dart';
+import 'package:projectmobile/pages/pages.dart';
 import 'package:projectmobile/shared/shared.dart';
 
 void main() {
@@ -16,22 +15,28 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Your App Title',
       theme: ThemeData(
+        primaryColor: pinkColor,
         scaffoldBackgroundColor: lightBackgroundColor,
         appBarTheme: AppBarTheme(
           backgroundColor: whiteColor,
-          elevation: 0,
           iconTheme: IconThemeData(color: blackColor),
-          centerTitle: true,
-          titleTextStyle:
-              blackTextStyle.copyWith(fontSize: 20, fontWeight: semiBold),
+          titleTextStyle: blackTextStyle.copyWith(
+            fontSize: 20,
+            fontWeight: semiBold,
+          ),
         ),
       ),
-      initialRoute: '/',
+      initialRoute: '/home-page',
       routes: {
         '/': (context) => Intro1Page(),
         '/intro2': (context) => Intro2Page(),
-        // Add more routes if needed
+        '/intro3': (context) => ScreenPage(),
+        '/login-page': (context) => LoginPage(),
+        '/register-page': (context) => RegisterPage(),
+        '/home-page': (context) => HomePage(),
+        '/profile-page': (context) => ProfilePage(),
       },
+      // home: HomePage(),
     );
   }
 }

@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:projectmobile/shared/shared.dart';
-import 'package:projectmobile/pages/intro2_page.dart';
+part of '../pages.dart';
 
 class Intro1Page extends StatelessWidget {
   const Intro1Page({Key? key}) : super(key: key);
@@ -10,11 +8,7 @@ class Intro1Page extends StatelessWidget {
     return Scaffold(
       body: GestureDetector(
         onTap: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => Intro2Page(),
-            ),
-          );
+          Navigator.pushNamed(context, '/intro2');
         },
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 43),
@@ -23,7 +17,7 @@ class Intro1Page extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  'assets/images/image1.png',
+                  'assets/images/img_intro1.png',
                   scale: 1.2,
                 ),
                 SizedBox(height: 10),

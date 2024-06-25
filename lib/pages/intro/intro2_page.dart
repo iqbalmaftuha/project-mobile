@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:projectmobile/shared/shared.dart';
+part of '../pages.dart';
 
 class Intro2Page extends StatelessWidget {
   const Intro2Page({Key? key}) : super(key: key);
@@ -14,7 +13,7 @@ class Intro2Page extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'assets/images/image2.png',
+                'assets/images/img_intro2.png',
                 scale: 1.1,
               ),
               SizedBox(height: 20),
@@ -43,7 +42,7 @@ class Intro2Page extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 60, right: 120, left: 120),
         child: ElevatedButton(
           onPressed: () {
-            Navigator.of(context).pushReplacementNamed('/mainPage');
+            Navigator.pushNamed(context, '/intro3');
           },
           child: Text(
             "Mulai",
